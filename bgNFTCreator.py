@@ -1,62 +1,62 @@
 from PIL import Image
 import random
 
-
 x_=0
 y_=0
 nb=0
 language="?"
 
+def img(x_, y_, nb):
+      im = Image.new("RGB", (x_, y_), (255, 255, 255))
+      
+      t=0
+      while t != nb:
+            for x in range(0, x_):
+                  for y in range(0, x_):
+                        r = int(random.randint(0, 255))
+                        g = int(random.randint(0, 255))
+                        b = int(random.randint(0, 255))
+                        im.putpixel((x, y), (r, g, b))
+            t=t+1
+            im.save("background " + str(t) + ".png")        
+
 def fr():
       print("Quel largeur voulez-vous pour votre fond ?")
-      input(x_)
+      x_=int(input())
       print("Quel longueur voulez-vous pour votre fond ?")
-      input(y_)
+      y_=int(input())
       print("Combien de fond voulez-vous ?")
-      input(nb)
-      img()
+      nb=int(input())
+      img(x_, y_, nb)
 
 def en():
-      print("What lenght do you want for your background (in pixels) ?")
-      input(x_)
+      print("Warning : Enter only positive ! ")
+      x_=int(input("What lenght do you want for your background (in pixels) ? "))
       if x_ <= 0:
             print("Invalid number, set one upper than 0. ")
-            print("To enter valid number restart the programme. ")
+            print("To enter valid number restart the programme.")
+            exit()
       else:
             print("It's ok! ")
-      print("What width do you want for your background (in pixels) ?")
-      input(y_)
+      y_=int(input("What width do you want for your background (in pixels) ?  "))
       if y_ <= 0:
             print("Invalid number, set one upper than 0.")
-            print("To enter valid number restart the programme.")
+            print("To enter valid number restart the programme.  ")
+            exit()
       else:
             print("It's ok!")
-      print("How many background do you want ?")
-      input(nb)
+      nb=int(input("How many background do you want ?  "))
       if nb <= 0:
             print("Invalid number, set one upper than 0.")
             print("To enter valid number restart the programme.")
+            exit()
       else:
             print("It's ok!")
-      img()
+      img(x_, y_, nb)
 
 print("Which language do you use ? (Fr, En, more will be added soon...)") #Language chooser
-input(language)
+language=input()
 if language == "fr" or language == "French" or language == "Français":
       fr()
 elif language == "en" or language == "English":
       en()
-
-im = Image.new("RGB", (x_, y_), (255, 255, 255))
-
-def img():
-      t=0
-      while t <= nb:
-            for x in range(0, x_):
-                  for y in range(0, x_):
-                        r = random.randint(0, 255)
-                        g = random.randint(0, 255)
-                        b = random.randint(0, 255)
-                        im.putpixel((x, y), (r, g, b))
-      im.save("background" + t +".png")
-      t=t+1
