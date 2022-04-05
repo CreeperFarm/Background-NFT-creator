@@ -23,6 +23,12 @@ def img(x_, y_, nb):
 def fr():
       print("Quel largeur voulez-vous pour votre fond ?")
       x_=int(input())
+      if x_ <= 0:
+            print("Nombre Invalid, entrer en un supérieur à 0.")
+            print("Pour entrer une valeur correct, redémarrer le programme.")
+            exit()
+      else:
+            print("C'est bon!")
       print("Quel longueur voulez-vous pour votre fond ?")
       y_=int(input())
       print("Combien de fond voulez-vous ?")
