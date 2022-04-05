@@ -31,8 +31,20 @@ def fr():
             print("C'est bon!")
       print("Quel longueur voulez-vous pour votre fond ?")
       y_=int(input())
+      if y_ <= 0:
+            print("Nombre Invalid, entrer en un supérieur à 0.")
+            print("Pour entrer une valeur correct, redémarrer le programme.")
+            exit()
+      else:
+            print("C'est bon!")
       print("Combien de fond voulez-vous ?")
       nb=int(input())
+      if nb <= 0:
+            print("Nombre Invalid, entrer en un supérieur à 0.")
+            print("Pour entrer une valeur correct, redémarrer le programme.")
+            exit()
+      else:
+            print("C'est bon!")
       img(x_, y_, nb)
 
 def en():
