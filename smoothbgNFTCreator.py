@@ -11,17 +11,18 @@ def img(x_, y_, nb):
       
       t=0
       while t != nb:
-            r = int(random.randint(0, 255))
-            g = int(random.randint(0, 255))
-            b = int(random.randint(0, 255))
+            rbase = int(random.randint(0, 255))
+            gbase = int(random.randint(0, 255))
+            bbase = int(random.randint(0, 255))
             for x in range(0, x_):
                   for y in range(0, x_):
-                        r = int(random.randint(r-10, r+10))
-                        g = int(random.randint(r-10, r+10))
-                        b = int(random.randint(r-10, r+10))
+                        r = int(random.randint(rbase-10, rbase+10))
+                        g = int(random.randint(gbase-10, gbase+10))
+                        b = int(random.randint(bbase-10, bbase+10))
                         im.putpixel((x, y), (r, g, b))
             t=t+1
-            im.save("background " + str(t) + ".png")        
+            im.save("background " + str(t) + ".png")   
+            im.show()
 
 def fr():
       print("Quel largeur voulez-vous pour votre fond ?")
