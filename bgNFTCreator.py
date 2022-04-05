@@ -18,7 +18,8 @@ def img(x_, y_, nb):
                         b = int(random.randint(0, 255))
                         im.putpixel((x, y), (r, g, b))
             t=t+1
-            im.save("background " + str(t) + ".png")        
+            im.save("background " + str(t) + ".png")
+      print("Your " + nb + "images have been created.")
 
 def fr():
       print("Quel largeur voulez-vous pour votre fond ?")
