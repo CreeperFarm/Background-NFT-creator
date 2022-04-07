@@ -1,11 +1,6 @@
 from PIL import Image
 import random
 
-x_=0
-y_=0
-nb=0
-language="?"
-
 def img(x_, y_, nb):
       im = Image.new("RGB", (x_, y_), (255, 255, 255))
       
@@ -22,7 +17,7 @@ def img(x_, y_, nb):
                         im.putpixel((x, y), (r, g, b))
             t=t+1
             im.save("smoothbackground " + str(t) + ".png")
-      print("Your " + nb + "images have been created.")
+      print("Your " + str(nb) + "images have been created.")
 
 def fr():
       print("Quel largeur voulez-vous pour votre fond ?")
