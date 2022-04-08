@@ -10,4 +10,5 @@
 <br>
 <h3>Releases</h3>
 <br>
-<p>The releases :<br><br><strong>1.0.0</strong> have been posted on the <strong>7 April 2022</strong>.</p>
+<p>The releases :<br><br> - <strong>1.0.1</strong> have been posted on the <strong>8 April 2022</strong> and add the endding of creation of the background ask.
+  <br> - <strong>1.0.0</strong> have been posted on the <strong>7 April 2022</strong>.</p>
