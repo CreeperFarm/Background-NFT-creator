@@ -14,7 +14,16 @@ def img(x_, y_, nb, language):
                         im.putpixel((x, y), (r, g, b))
             t=t+1
             im.save("background " + str(t) + ".png")
-      print("Your " + str(nb) + " images have been created.")
+      if language == "fr" or language == "French" or language == "Français":
+            if nb == 1:
+                  print("Votre image a correctement été créer.")
+            else:
+                  print("Vos " + str(nb) + "images ont correctement été créer.")
+      elif language == "en" or language == "English":
+            if nb == 1:
+                  print("Your image have been correctly created.")
+            else:
+                  print("Your " + str(nb) + " images have been correctly created.")
 
 def fr(language):
       x_=int(input("Quel largeur voulez-vous pour votre fond ?  -->"))
