@@ -77,8 +77,7 @@ def en(language):
             print("It's ok!")
       img(x_, y_, nb, language)
 
-print("Which language do you use ? (Fr, En, more will be added soon...)") #Language chooser
-language=input()
+language = input("Which language do you use ? (Fr, En, more will be added soon...) -->") #Language chooser
 if language == "fr" or language == "French" or language == "Français":
       fr(language)
 elif language == "en" or language == "English":
